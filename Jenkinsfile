@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // npm을 사용하여 종속성을 설치합니다.
                 // sh 'npm install'
-                bat 'cd C:\Users\jsd\Documents\jsd\programming\jenkins-vite-vue-tuto && npm install'
+                bat 'cd C:/Users/jsd/Documents/jsd/programming/jenkins-vite-vue-tuto && npm install'
             }
         }
 
