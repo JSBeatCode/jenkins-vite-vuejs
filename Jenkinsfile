@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Git 저장소에서 소스 코드를 가져옵니다.
-                git 'https://github.com/JSBeatCode/jenkins-vite-vuejs.git'
+                git branch: 'main', credentialsId: 'github_token', url: 'https://github.com/JSBeatCode/jenkins-vite-vuejs.git'
             }
         }
 
