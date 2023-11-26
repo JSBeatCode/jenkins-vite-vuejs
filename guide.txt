@@ -1,0 +1,6 @@
+java 11 or 17 or 21 설치
+jenkins msi download
+설치 전 설정: https://yyjing.tistory.com/94 (사용자(컴퓨터 사용자): jsd / qwer1234)
+설치하면서 port번호 지정: 8909
+localhost:8909 접속
+빨간줄 열어서 crendential key 입력: C:\Users\jsd\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword
