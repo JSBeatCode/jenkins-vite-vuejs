@@ -29,7 +29,7 @@ pipeline {
             steps {
                 // 배포 스크립트를 실행합니다.
                 // 예시: 배포 스크립트를 프로젝트의 필요에 따라 수정하세요.
-                bat 'cd C:/Users/jsd/Documents/jsd/programming/jenkins-vite-vue-tuto && npm run dev'
+                bat 'cd C:/Users/jsd/Documents/jsd/programming/jenkins-vite-vue-tuto && pm2 start index.cjs'
             }
         }
     }
