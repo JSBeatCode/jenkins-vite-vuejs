@@ -1,6 +1,28 @@
-java 11 or 17 or 21 설치
-jenkins msi download
-설치 전 설정: https://yyjing.tistory.com/94 (사용자(컴퓨터 사용자): jsd / qwer1234)
-설치하면서 port번호 지정: 8909
-localhost:8909 접속
-빨간줄 열어서 crendential key 입력: C:\Users\jsd\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword
+1. jenkins 설치
+    java 11 or 17 or 21 설치
+    jenkins msi download
+    설치 전 설정: https://yyjing.tistory.com/94 (사용자(컴퓨터 사용자): jsd / qwer1234)
+    설치하면서 port번호 지정: 8909
+    localhost:8909 접속
+    빨간줄 열어서 crendential key 입력: C:\Users\jsd\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword
+    필요한 플로그인 설치 클릭
+
+2. github 생성
+    git repository 생성
+        git init
+        git add .
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/JSBeatCode/jenkins-vite-vuejs.git
+        git push -u origin main
+
+3. github access key 생성
+    https://github.com/settings/tokens
+    or
+    github -> settings -> developer settings -> Personal access tokens
+
+    해당 페이지에서 Generate new token 클릭
+    token 이름 설정 후 repo, admin_hook 을 체크하고 Generate token 을 클릭합니다.
+
+4. jenkins에서 credential 생성
+    jenkins 관리 클릭 > 
