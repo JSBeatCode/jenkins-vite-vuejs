@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
-dist-ssr
+# dist-ssr
 *.local
 
 # Editor directories and files
@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+package-lock.json
+.env
+
+dist/
+/dist
+**/dist/**
+dist/**
+**/dist
+*/dist/*
+dist/*
+*/dist
+dist/*.*
+
+*copy.*
+dist/index.html
+dist/assets/index-0b867ad8.js

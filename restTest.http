@@ -1,0 +1,24 @@
+### GET ALL
+GET http://localhost:3010/data HTTP/1.1
+
+### INSERT POST
+POST http://localhost:3010/data HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "id003",
+    "class": "test",
+    "subject": "테스트",
+    "contents:": "테스트글"
+}
+
+### email POST
+POST http://localhost:7771/email HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "id003",
+    "class": "test",
+    "subject": "테스트",
+    "contents:": "테스트글"
+}

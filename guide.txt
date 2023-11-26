@@ -9,6 +9,7 @@
 
 2. github 생성
     git repository 생성
+    프로젝트 생성
         git init
         git add .
         git commit -m "first commit"
@@ -24,5 +25,11 @@
     해당 페이지에서 Generate new token 클릭
     token 이름 설정 후 repo, admin_hook 을 체크하고 Generate token 을 클릭합니다.
 
-4. jenkins에서 credential 생성
-    jenkins 관리 클릭 > 
+4. jenkins에서 아까 github personal access key 생성한 것으로 credential 추가 
+5. ngrok 설치, 로그인 후 ngrok http http://localhost:8909
+6. ngrok로 나온 url을 github repository의 webhook에 'url'/github-hook 추가 
+7. git repository에 jenkinsFile을 생성하고 안에 pipescript 작성
+8. create new job 해서 git, gitSCM으로 추가 (git url, credential, branch(main으로) 등 설정)
+9. code commit
+10. jenkins build 되는것 확인
+11. 웹 접속

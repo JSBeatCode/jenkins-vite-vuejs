@@ -1,18 +1,42 @@
 {
-  "name": "jenkins",
+  "name": "front",
   "private": true,
   "version": "0.0.0",
+  "main": "index.cjs",
+  "proxy": "http://localhost:3010",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "client": "nodemon index.js",
+    "server": "npx json-server --watch database.json --port 3010",
+    "app": "concurrently --kill-others \"npm run client\" \"npm run server\"",
+    "setup-build": "vite build",
+    "setup-client": "nodemon index.cjs",
+    "setup-server": "npx json-server --watch database.json --port 3010",
+    "setup-app": "concurrently --kill-others \"npm run setup-client\" \"npm run setup-server\"",
+    "setup-all-client": "npm-run-all setup-build setup-client",
+    "setup-all": "npm-run-all setup-build setup-app"
   },
   "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "json-server": "^0.17.3",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.5",
+    "npm-run-all": "^4.1.5",
+    "os": "^0.1.2",
+    "pm2": "^5.3.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "sass": "^1.68.0",
     "vite": "^4.4.5"
   }
 }
