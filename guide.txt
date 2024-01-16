@@ -32,7 +32,12 @@
 	 - Kind : Secret text 선택
 	 - Secret : 위에서 생성한 토큰 입력
 	 - ID : 본인이 지정하는 식별자(ID) 입력
-5. ngrok 설치, 로그인 후 ngrok http http://localhost:8909
+5. ngrok 설치:
+	> window 버전 다운로드 후 압축풀기 
+	> ngrok.exe 실행
+	> ngrok config add-authtoken <TOKEN>
+	> 로그인 후 ngrok http http://localhost:8909
+	
 6. ngrok로 나온 url을 github repository의 webhook에 [url]/github-hook 추가 
 7. git repository에 jenkinsFile을 생성하고 안에 pipescript 작성(window cmd 용으로 작성: bat, pm2)
 8. create new job 해서 git, gitSCM으로 추가 (git url, credential, branch(main으로) 등 설정)
