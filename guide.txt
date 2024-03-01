@@ -40,7 +40,7 @@
 	> 웹 ngrok 대시보드에서 확인한 토근 적용: ngrok config add-authtoken <TOKEN>
 	> 로그인 후 ngrok http http://localhost:8909
 	
-6. ngrok로 나온 url을 복사 > github repository의 webhook에 add webhook > [복사한 url]/github-hook 추가, application/json으로 설정 > 설정탭에서 ping 되나 확인
+6. ngrok로 나온 url을 복사 > github repository의 webhook에 add webhook > [복사한 url]/github-webhook 추가, application/json으로 설정 > 설정탭에서 ping 되나 확인
 6-1. 플젝path > cmd > npm install -g pm2 > npm i express cors
 6-2. index.cjs 코딩
 	const express = require('express');
